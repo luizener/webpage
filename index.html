@@ -1,10 +1,192 @@
-<html>
-  
-  <body>
-    
-    <h2>hello world</h2>
-    edit file here
-    
-    </body>
-  
-  </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HORARIOS</title>
+	    <style>
+        /* Estilo para ocultar las secciones por defecto */
+        .seccion {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <h1>Consultar y Cargar Tabla</h1>
+
+
+
+
+
+    <!-- Botones para mostrar/ocultar secciones -->
+    <button onclick="mostrarSeccion(1)">CLAUSTRO</button>
+    <button onclick="mostrarSeccion(2)">TORRE 1</button>
+    <button onclick="mostrarSeccion(3)">TORRE 2</button>
+    <button onclick="mostrarSeccion(4)">EL TIEMPO</button>
+    <!-- Puedes agregar más botones según sea necesario -->
+
+    <!-- Sección 1: Botones 1-10 -->
+    <div class="seccion" id="seccion1">
+        <h3>CLAUSTRO</h3>
+			<button class="urlBtn" data-url="2250">Auditorio-JOCKEY </button>
+			<button class="urlBtn" data-url="223">Auditorio-MUTIS </button>
+			<button class="urlBtn" data-url="224">Aula-MaXIMA </button>
+			<button class="urlBtn" data-url="2361">PATIO-PRINCIPAL-Arco-#-10 </button>
+			<button class="urlBtn" data-url="2363">PATIO-PRINCIPAL-Arco-#-12 </button>
+			<button class="urlBtn" data-url="2366">PATIO-PRINCIPAL-Arco-#-13 </button>
+			<button class="urlBtn" data-url="2368">PATIO-PRINCIPAL-Arco-#-14 </button>
+			<button class="urlBtn" data-url="2370">PATIO-PRINCIPAL-Arco-#-15 </button>
+			<button class="urlBtn" data-url="2349">PATIO-PRINCIPAL-Arco-#-2 </button>
+			<button class="urlBtn" data-url="2351">PATIO-PRINCIPAL-Arco-#-3 </button>
+			<button class="urlBtn" data-url="2353">PATIO-PRINCIPAL-Arco-#-4 </button>
+			<button class="urlBtn" data-url="2355">PATIO-PRINCIPAL-Arco-#-5 </button>
+			<button class="urlBtn" data-url="2357">PATIO-PRINCIPAL-Arco-#-6 </button>
+			<button class="urlBtn" data-url="2359">PATIO-PRINCIPAL-Arco-#-7 </button>
+			<button class="urlBtn" data-url="18">Salon-126 </button>
+			<button class="urlBtn" data-url="1">Salon-127 </button>
+			<button class="urlBtn" data-url="2">Salon-128 </button>
+			<button class="urlBtn" data-url="3">Salon-129 </button>
+			<button class="urlBtn" data-url="1240">Salon-225 </button>
+			<button class="urlBtn" data-url="140">Salon-230 </button>
+			<button class="urlBtn" data-url="4">Salon-232 </button>
+			<button class="urlBtn" data-url="5">Salon-234 </button>
+			<button class="urlBtn" data-url="283">TEATRINO </button>
+			<button class="urlBtn" data-url="2345">TEATRINO-Muros </button>
+
+
+    </div>
+
+    <!-- Sección 2: Botones 11-20 -->
+    <div class="seccion" id="seccion2">
+        <h3>TORRE 1</h3>
+			<button class="urlBtn" data-url="19">Salon-501 </button>
+			<button class="urlBtn" data-url="20">Salon-502 </button>
+			<button class="urlBtn" data-url="22">Salon-601 </button>
+			<button class="urlBtn" data-url="23">Salon-602 </button>
+			<button class="urlBtn" data-url="25">Salon-701 </button>
+			<button class="urlBtn" data-url="26">Salon-702 </button>
+			<button class="urlBtn" data-url="28">Salon-802 </button>
+			<button class="urlBtn" data-url="29">Salon-801 </button>
+
+    </div>
+
+    <!-- Sección 3: Botones 21-30 -->
+    <div class="seccion" id="seccion3">
+        <h3>torre 2</h3>
+			<button class="urlBtn" data-url="13">Aula-de-Informatica-B </button>
+			<button class="urlBtn" data-url="31">Sala-Computo-3-(Windows)-C-sotano-T2 </button>
+			<button class="urlBtn" data-url="33">Aula-de-Informatica-D </button>
+			<button class="urlBtn" data-url="34">Salon-301 </button>
+			<button class="urlBtn" data-url="35">Salon-302-Sala-Turing </button>
+			<button class="urlBtn" data-url="41">Salon-HIPATIA </button>
+			<button class="urlBtn" data-url="42">Sala-LOVE-LACE </button>
+			<button class="urlBtn" data-url="45">Salon-701 </button>
+			<button class="urlBtn" data-url="46">Salon-702 </button>
+			<button class="urlBtn" data-url="49">Salon-801 </button>
+			<button class="urlBtn" data-url="50">Salon-802 </button>
+			<button class="urlBtn" data-url="52">Salon-901 </button>
+			<button class="urlBtn" data-url="53">Salon-902 </button>
+			<button class="urlBtn" data-url="55">Salon-1001 </button>
+			<button class="urlBtn" data-url="179">Salon-601 </button>
+			<button class="urlBtn" data-url="187">Salon-201 </button>
+			<button class="urlBtn" data-url="188">Salon-202 </button>
+			<button class="urlBtn" data-url="1301">Aula-de-Informatica-A </button>
+			<button class="urlBtn" data-url="3427">LABORATORIO-TESLA </button>
+			<button class="urlBtn" data-url="4474">LABORATORIO-BIG-DATA </button>
+			<button class="urlBtn" data-url="5025">PATIO-1 </button>
+
+    </div>
+	
+	    <div class="seccion" id="seccion4">
+        <h3>EL TIEMPO</h3>
+
+			<button class="urlBtn" data-url="4685">Sala-BOOLE </button>
+			<button class="urlBtn" data-url="4687">BEATS </button>
+			<button class="urlBtn" data-url="4689">LABORATORIO-BARDEEN </button>
+			<button class="urlBtn" data-url="4905">Auditorio-CENTRO-DE-DIALOGO </button>
+			<button class="urlBtn" data-url="4947">Sala-DEBATE </button>
+			<button class="urlBtn" data-url="5027">LABORATORIO-NOETHER </button>
+			<button class="urlBtn" data-url="5029">Sala-HINNT </button>
+			<button class="urlBtn" data-url="5031">LABORATORIO-BERNOULLI </button>
+			<button class="urlBtn" data-url="5033">Sala-NASH </button>
+			<button class="urlBtn" data-url="5035">LABORATORIO-Da-Vinci </button>
+			<button class="urlBtn" data-url="5037">LABORATORIO-VOLTA </button>
+			<button class="urlBtn" data-url="5087">Zona-Auditorio </button>
+			<button class="urlBtn" data-url="5527">SALON-CULTURA </button>
+		</div>
+
+    <!-- Tabla para mostrar los resultados -->
+    <table border="1" id="tablaResultados">
+
+        <tbody>
+            <!-- Aquí se agregarán las filas dinámicamente -->
+        </tbody>
+    </table>
+
+    <script>
+        // Función para cargar la tabla desde la URL dinámica
+        async function cargarTabla(urlValue) {
+            const url = `https://api.allorigins.win/get?url=${encodeURIComponent(`https://appsweb.urosario.edu.co/horario/index.php?salon=${urlValue}`)}`;
+
+            const tabla = document.getElementById("tablaResultados").querySelector("tbody");
+            tabla.innerHTML = "<tr><td colspan='3'>Cargando datos...</td></tr>"; // Mensaje de carga
+
+            try {
+                // Realizar la consulta a la URL
+                const response = await fetch(url);
+                if (!response.ok) {
+                    throw new Error(`Error al consultar ${url}: ${response.status}`);
+                }
+                const data = await response.json(); // AllOrigins devuelve JSON
+
+                // Parsear el HTML de la respuesta
+                const parser = new DOMParser();
+                const doc = parser.parseFromString(data.contents, "text/html");
+
+                // Seleccionar las filas de la tabla
+                const filas = doc.querySelectorAll("table tr"); // Cambia el selector si es necesario
+                if (filas.length > 0) {
+                    // Limpiar el cuerpo de la tabla y agregar las filas
+                    tabla.innerHTML = ""; 
+                    filas.forEach((fila, index) => {
+                        if (index > 0) { // Omitir el encabezado (si las tablas tienen uno)
+                            tabla.innerHTML += fila.outerHTML; // Agregar fila a la tabla
+                        }
+                    });
+                } else {
+                    tabla.innerHTML = "<tr><td colspan='3'>No se encontró contenido en la tabla.</td></tr>";
+                }
+            } catch (error) {
+                console.error(error);
+                tabla.innerHTML = `<tr><td colspan='3'>Error: ${error.message}</td></tr>`;
+            }
+        }
+
+
+        // Función para mostrar/ocultar una sección
+        function mostrarSeccion(seccionId) {
+            // Primero, ocultamos todas las secciones
+            const secciones = document.querySelectorAll('.seccion');
+            secciones.forEach(seccion => {
+                seccion.style.display = 'none';
+            });
+
+            // Luego mostramos la sección solicitada
+            const seccion = document.getElementById('seccion' + seccionId);
+            if (seccion) {
+                seccion.style.display = 'block';
+            }
+        }
+		
+		
+        // Añadir evento a los botones
+        const botones = document.querySelectorAll(".urlBtn");
+        botones.forEach(boton => {
+            boton.addEventListener("click", () => {
+                const urlValue = boton.getAttribute("data-url");
+                cargarTabla(urlValue); // Llamar a la función con el valor de la URL
+            });
+        });
+    </script>
+</body>
+</html>
