@@ -10,96 +10,113 @@
             display: none;
         }
     </style>
+	    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-    <h1>Consultar y Cargar Tabla</h1>
+
+    <h1><center>HORARIO ESPACIOS U ROSARIO</center></h1>
 
 
 
 
-
+<div class="btn-group btn-primary urlBtn"  role="group" aria-label="Basic example">
     <!-- Botones para mostrar/ocultar secciones -->
-    <button onclick="mostrarSeccion(1)">CLAUSTRO</button>
-    <button onclick="mostrarSeccion(2)">TORRE 1</button>
-    <button onclick="mostrarSeccion(3)">TORRE 2</button>
-    <button onclick="mostrarSeccion(4)">EL TIEMPO</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(1)">CLAUSTRO</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(2)">TORRE 1</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(3)">TORRE 2</button>
+	<button type="button" class="btn btn-success" onclick="mostrarSeccion(4)">EL TIEMPO</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(5)">CASUR PISO 2</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(6)">CASUR PISO 3</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(7)">CASUR PISO 4</button>
+    <button type="button" class="btn btn-success"onclick="mostrarSeccion(8)">CASUR PISO 5</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(9)">CASUR PISO 6</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(10)">PEDRO FERMIN</button>
+ </div>  
     <!-- Puedes agregar más botones según sea necesario -->
 
     <!-- Sección 1: Botones 1-10 -->
     <div class="seccion" id="seccion1">
         <h3>CLAUSTRO</h3>
-			<button class="urlBtn" data-url="2250">Auditorio-JOCKEY </button>
-			<button class="urlBtn" data-url="223">Auditorio-MUTIS </button>
-			<button class="urlBtn" data-url="224">Aula-MaXIMA </button>
-			<button class="urlBtn" data-url="2361">PATIO-PRINCIPAL-Arco-#-10 </button>
-			<button class="urlBtn" data-url="2363">PATIO-PRINCIPAL-Arco-#-12 </button>
-			<button class="urlBtn" data-url="2366">PATIO-PRINCIPAL-Arco-#-13 </button>
-			<button class="urlBtn" data-url="2368">PATIO-PRINCIPAL-Arco-#-14 </button>
-			<button class="urlBtn" data-url="2370">PATIO-PRINCIPAL-Arco-#-15 </button>
-			<button class="urlBtn" data-url="2349">PATIO-PRINCIPAL-Arco-#-2 </button>
-			<button class="urlBtn" data-url="2351">PATIO-PRINCIPAL-Arco-#-3 </button>
-			<button class="urlBtn" data-url="2353">PATIO-PRINCIPAL-Arco-#-4 </button>
-			<button class="urlBtn" data-url="2355">PATIO-PRINCIPAL-Arco-#-5 </button>
-			<button class="urlBtn" data-url="2357">PATIO-PRINCIPAL-Arco-#-6 </button>
-			<button class="urlBtn" data-url="2359">PATIO-PRINCIPAL-Arco-#-7 </button>
-			<button class="urlBtn" data-url="18">Salon-126 </button>
-			<button class="urlBtn" data-url="1">Salon-127 </button>
-			<button class="urlBtn" data-url="2">Salon-128 </button>
-			<button class="urlBtn" data-url="3">Salon-129 </button>
-			<button class="urlBtn" data-url="1240">Salon-225 </button>
-			<button class="urlBtn" data-url="140">Salon-230 </button>
-			<button class="urlBtn" data-url="4">Salon-232 </button>
-			<button class="urlBtn" data-url="5">Salon-234 </button>
-			<button class="urlBtn" data-url="283">TEATRINO </button>
-			<button class="urlBtn" data-url="2345">TEATRINO-Muros </button>
-
-
+		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">
+			<button class="btn btn-info urlBtn" data-url="2250">Auditorio-JOCKEY </button>
+			<button class="btn btn-info urlBtn" data-url="223">Auditorio-MUTIS </button>
+			<button class="btn btn-info urlBtn" data-url="18">Salon-126 </button>
+			<button class="btn btn-info urlBtn" data-url="1">Salon-127 </button>
+			<button class="btn btn-info urlBtn" data-url="2">Salon-128 </button>
+			<button class="btn btn-info urlBtn" data-url="3">Salon-129 </button>
+			<button class="btn btn-info urlBtn" data-url="1240">Salon-225 </button>
+			<button class="btn btn-info urlBtn" data-url="140">Salon-230 </button>
+			<button class="btn btn-info urlBtn" data-url="4">Salon-232 </button>
+			<button class="btn btn-info urlBtn" data-url="5">Salon-234 </button>
+			<button class="btn btn-info urlBtn" data-url="283">TEATRINO </button>
+		</div>
+		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">
+			<button class="btn btn-primary urlBtn" data-url="2349">PATIO-PRINCIPAL-Arco-#-2 </button>
+			<button class="btn btn-primary urlBtn" data-url="2351">PATIO-PRINCIPAL-Arco-#-3 </button>
+			<button class="btn btn-primary urlBtn" data-url="2353">PATIO-PRINCIPAL-Arco-#-4 </button>
+			<button class="btn btn-primary urlBtn" data-url="2355">PATIO-PRINCIPAL-Arco-#-5 </button>
+			<button class="btn btn-primary urlBtn" data-url="2357">PATIO-PRINCIPAL-Arco-#-6 </button>
+			<button class="btn btn-primary urlBtn" data-url="2359">PATIO-PRINCIPAL-Arco-#-7 </button>
+			<button class="btn btn-primary urlBtn" data-url="2361">PATIO-PRINCIPAL-Arco-#-10 </button>
+			<button class="btn btn-primary urlBtn" data-url="2363">PATIO-PRINCIPAL-Arco-#-12 </button>
+			<button class="btn btn-primary urlBtn" data-url="2366">PATIO-PRINCIPAL-Arco-#-13 </button>
+			<button class="btn btn-primary urlBtn" data-url="2368">PATIO-PRINCIPAL-Arco-#-14 </button>
+			<button class="btn btn-primary urlBtn" data-url="2370">PATIO-PRINCIPAL-Arco-#-15 </button>
+		</div>
     </div>
 
     <!-- Sección 2: Botones 11-20 -->
     <div class="seccion" id="seccion2">
         <h3>TORRE 1</h3>
-			<button class="urlBtn" data-url="19">Salon-501 </button>
-			<button class="urlBtn" data-url="20">Salon-502 </button>
-			<button class="urlBtn" data-url="22">Salon-601 </button>
-			<button class="urlBtn" data-url="23">Salon-602 </button>
-			<button class="urlBtn" data-url="25">Salon-701 </button>
-			<button class="urlBtn" data-url="26">Salon-702 </button>
-			<button class="urlBtn" data-url="28">Salon-802 </button>
-			<button class="urlBtn" data-url="29">Salon-801 </button>
+		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">
+			<button class="btn btn-info urlBtn" data-url="19">Salon-501 </button>
+			<button class="btn btn-info urlBtn" data-url="20">Salon-502 </button>
+			<button class="btn btn-info urlBtn" data-url="22">Salon-601 </button>
+			<button class="btn btn-info urlBtn" data-url="23">Salon-602 </button>
+			<button class="btn btn-info urlBtn" data-url="25">Salon-701 </button>
+			<button class="btn btn-info urlBtn" data-url="26">Salon-702 </button>
+			<button class="btn btn-info urlBtn" data-url="28">Salon-802 </button>
+			<button class="btn btn-info urlBtn" data-url="29">Salon-801 </button>
+		</div>
 
     </div>
 
     <!-- Sección 3: Botones 21-30 -->
     <div class="seccion" id="seccion3">
-        <h3>torre 2</h3>
-			<button class="urlBtn" data-url="13">Aula-de-Informatica-B </button>
-			<button class="urlBtn" data-url="31">Sala-Computo-3-(Windows)-C-sotano-T2 </button>
-			<button class="urlBtn" data-url="33">Aula-de-Informatica-D </button>
-			<button class="urlBtn" data-url="34">Salon-301 </button>
-			<button class="urlBtn" data-url="35">Salon-302-Sala-Turing </button>
-			<button class="urlBtn" data-url="41">Salon-HIPATIA </button>
-			<button class="urlBtn" data-url="42">Sala-LOVE-LACE </button>
-			<button class="urlBtn" data-url="45">Salon-701 </button>
-			<button class="urlBtn" data-url="46">Salon-702 </button>
-			<button class="urlBtn" data-url="49">Salon-801 </button>
-			<button class="urlBtn" data-url="50">Salon-802 </button>
-			<button class="urlBtn" data-url="52">Salon-901 </button>
-			<button class="urlBtn" data-url="53">Salon-902 </button>
-			<button class="urlBtn" data-url="55">Salon-1001 </button>
-			<button class="urlBtn" data-url="179">Salon-601 </button>
-			<button class="urlBtn" data-url="187">Salon-201 </button>
-			<button class="urlBtn" data-url="188">Salon-202 </button>
-			<button class="urlBtn" data-url="1301">Aula-de-Informatica-A </button>
-			<button class="urlBtn" data-url="3427">LABORATORIO-TESLA </button>
-			<button class="urlBtn" data-url="4474">LABORATORIO-BIG-DATA </button>
-			<button class="urlBtn" data-url="5025">PATIO-1 </button>
-
+        <h3>TORRE 2</h3>
+		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">
+			<button class="btn btn-info urlBtn" data-url="1301">Aula-de-Informatica-A </button>
+			<button class="btn btn-info urlBtn" data-url="13">Aula-de-Informatica-B </button>
+			<button class="btn btn-info urlBtn" data-url="31">Sala-Computo-3-(Windows)-C-sotano-T2 </button>
+			<button class="btn btn-info urlBtn" data-url="33">Aula-de-Informatica-D </button>
+			<button class="btn btn-info urlBtn" data-url="187">Salon-201 </button>
+			<button class="btn btn-info urlBtn" data-url="188">Salon-202 </button>
+			<button class="btn btn-info urlBtn" data-url="34">Salon-301 </button>
+			<button class="btn btn-info urlBtn" data-url="35">Salon-302-Sala-Turing </button>
+			<button class="btn btn-info urlBtn" data-url="3427">LABORATORIO-TESLA </button>
+			<button class="btn btn-info urlBtn" data-url="4474">LABORATORIO-BIG-DATA </button>
+		</div>	
+		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">	
+			<button class="btn btn-primary urlBtn" data-url="41">Salon-HIPATIA </button>
+			<button class="btn btn-primary urlBtn" data-url="42">Sala-LOVE-LACE </button>
+			<button class="btn btn-primary urlBtn" data-url="179">Salon-601 </button>
+			<button class="btn btn-primary urlBtn" data-url="45">Salon-701 </button>
+			<button class="btn btn-primary urlBtn" data-url="46">Salon-702 </button>
+			<button class="btn btn-primary urlBtn" data-url="49">Salon-801 </button>
+			<button class="btn btn-primary urlBtn" data-url="50">Salon-802 </button>
+			<button class="btn btn-primary urlBtn" data-url="52">Salon-901 </button>
+			<button class="btn btn-primary urlBtn" data-url="53">Salon-902 </button>
+			<button class="btn btn-primary urlBtn" data-url="55">Salon-1001 </button>
+		</div>
     </div>
 	
-	    <div class="seccion" id="seccion4">
+	<div class="seccion" id="seccion4">
         <h3>EL TIEMPO</h3>
-
+		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">
 			<button class="urlBtn" data-url="4685">Sala-BOOLE </button>
 			<button class="urlBtn" data-url="4687">BEATS </button>
 			<button class="urlBtn" data-url="4689">LABORATORIO-BARDEEN </button>
@@ -114,7 +131,38 @@
 			<button class="urlBtn" data-url="5087">Zona-Auditorio </button>
 			<button class="urlBtn" data-url="5527">SALON-CULTURA </button>
 		</div>
+	</div>
+	<div class="seccion" id="seccion5">
+        <h3>CASUR PISO 2</h3>
 
+	</div>
+	
+	<div class="seccion" id="seccion6">
+        <h3>CASUR PISO 3</h3>
+
+	</div>
+	
+	<div class="seccion" id="seccion7">
+        <h3>CASUR PISO 4</h3>
+
+	</div>
+	
+	<div class="seccion" id="seccion8">
+        <h3>CASUR PISO 5</h3>
+
+	</div>
+	
+	<div class="seccion" id="seccion9">
+        <h3>CASUR PISO 6</h3>
+
+	</div>
+	
+	<div class="seccion" id="seccion10">
+        <h3>PEDRO FERMIN</h3>
+
+	</div>
+	
+	
     <!-- Tabla para mostrar los resultados -->
     <table border="1" id="tablaResultados">
 
@@ -182,7 +230,9 @@
         // Añadir evento a los botones
         const botones = document.querySelectorAll(".urlBtn");
         botones.forEach(boton => {
-            boton.addEventListener("click", () => {
+            boton.addEventListener("click", () => 
+
+			{
                 const urlValue = boton.getAttribute("data-url");
                 cargarTabla(urlValue); // Llamar a la función con el valor de la URL
             });
