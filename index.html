@@ -214,13 +214,13 @@
 			
 		  <thead>
 			<tr>
-			  <th >#</th>
-			  <th >First</th>
-			  <th >Last</th>
-			  <th >Handle</th>
-			  <th >First</th>
-			  <th >Last</th>
-			  <th >Last</th>
+			  <th >DIA</th>
+			  <th >HORARIO</th>
+			  <th >CLASE-ACTIVIDAD</th>
+			  <th >GRUPO</th>
+			  <th >DOCENTE</th>
+			  <th >FECHA INICIO</th>
+			  <th >FECHA FIN</th>
 			</tr>
 		  </thead>
 
@@ -260,33 +260,51 @@
                     tabla.innerHTML = ""; 
                     filas.forEach((fila, index) => {
                         const primeraCelda = fila.cells[0];
+						var fila_act="";
 						if (primeraCelda && primeraCelda.textContent.trim().startsWith('D')) {
 						}
 						else{
-							const primeraFila = filas[0];
-							//console.log(primeraFila.cells.length);
-                            tabla.innerHTML += fila.outerHTML; // Agregar fila a la tabla
-						}
-                        
-                    });
-					
-
 							
-						
-			
+							if(fila.childElementCount==6){								
+								fila_act += '<td>'+fila.cells[0].innerText+'</td>';	
+								fila_act += '<td>'+fila.cells[1].innerText+'</td>';
+								fila_act += '<td>'+fila.cells[2].innerText+'</td>';	
+								fila_act += '<td>'+fila.cells[3].innerText+'</td>';	
+								fila_act += '<td>'+' '+'</td>';	
+								fila_act += '<td>'+fila.cells[4].innerText+'</td>';	
+								fila_act += '<td>'+fila.cells[5].innerText+'</td>';	
+							}
+							else{	
+								fila_act += ('<td>'+fila.cells[0].innerText+'</td>');	
+								fila_act += '<td>' +fila.cells[1].innerText+'</td>';
+								fila_act += '<td>'+fila.cells[2].innerText+'</td>';	
+								fila_act += '<td>'+fila.cells[3].innerText+'</td>';	
+								fila_act += '<td>'+fila.cells[4].innerText+'</td>';	
+								fila_act += '<td>'+fila.cells[5].innerText+'</td>';
+								fila_act += '<td>'+fila.cells[6].innerText+'</td>';
+							}
+                            tabla.innerHTML += '<tr>'+fila_act+'</tr>'; // Agregar fila a la tabla
+						}
+                    });
+
                 } else {
                     tabla.innerHTML = "<tr><td colspan='3'>No se encontró contenido en la tabla.</td></tr>";
                 }
-						
+				
+					const tablaResultados = $('#tablaResultados');
+					if ($.fn.DataTable.isDataTable(tablaResultados)) {
+						// Destruir instancia previa si existe
+						tablaResultados.DataTable().destroy();
+						console.log('murio');
+					}
+					// Crear nueva instancia
+					tablaResultados.DataTable();
 						
             } catch (error) {
                 console.error(error);
                 //tabla.innerHTML = `<tr><td colspan='3'>Error: ${error.message}</td></tr>`;
             }
 	}
-      
-
-
         // Función para mostrar/ocultar una sección
         function mostrarSeccion(seccionId) {
             // Primero, ocultamos todas las secciones
@@ -294,7 +312,6 @@
             secciones.forEach(seccion => {
                 seccion.style.display = 'none';
             });
-
             // Luego mostramos la sección solicitada
             const seccion = document.getElementById('seccion' + seccionId);
             if (seccion) {
@@ -302,22 +319,15 @@
             }
         }
 		
-		
         // Añadir evento a los botones
         const botones = document.querySelectorAll(".urlBtn");
         botones.forEach(boton => {
             boton.addEventListener("click", () => 
-
 			{
                 const urlValue = boton.getAttribute("data-url");
                 cargarTabla(urlValue); // Llamar a la función con el valor de la URL
-				
             });
         });
-		
-
-
-		
     </script>
 </body>
 </html>
