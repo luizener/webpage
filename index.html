@@ -14,18 +14,22 @@
 	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-	<link href="https://cdn.datatables.net/1.13.6/css/jquery.dataTables.min.css" rel="stylesheet">
-	<!-- JQuery y DataTables JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
-	<script>
-		    $(document).ready(function () {
-            // Inicializa DataTables en la tabla con ID "miTabla"
-            $('#tablaResultados').DataTable();
-        });
-		</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.min.css">
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.min.js"></script>
+  
 </head>
 <body>
+
+
+<script type="text/javascript">
+
+</script>
+
+
 
     <h1><center>HORARIO ESPACIOS U ROSARIO</center></h1>
 
@@ -44,6 +48,7 @@
     <button type="button" class="btn btn-success"onclick="mostrarSeccion(8)">CASUR PISO 5</button>
     <button type="button" class="btn btn-success" onclick="mostrarSeccion(9)">CASUR PISO 6</button>
     <button type="button" class="btn btn-success" onclick="mostrarSeccion(10)">PEDRO FERMIN</button>
+    <button type="button" class="btn btn-success" onclick="mostrarSeccion(11)">CASA ROSARISTA</button>
  </div>  
     <!-- Puedes agregar más botones según sea necesario -->
 
@@ -179,12 +184,29 @@
 	</div>
 	
 	<div class="seccion" id="seccion10">
-		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">
-        <h3>PEDRO FERMIN</h3>
 		
+        <h3>PEDRO FERMIN</h3>
+		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">
+			<button class="btn btn-info urlBtn" data-url="67">Auditorio-1 </button>
+			<button class="btn btn-info urlBtn" data-url="68">Auditorio-2 </button>
+			<button class="btn btn-info urlBtn" data-url="69">Auditorio-3 </button>
 		</div>
 	</div>
 	
+	<div class="seccion" id="seccion11">
+	<h3>CASA ROSARISTA</h3>
+		<div class="btn-group btn-lg btn-block" role="group" aria-label="Basic example">
+        
+			<button class="btn btn-info urlBtn" data-url="1209">Salon-BURGOS </button>
+			<button class="btn btn-info urlBtn" data-url="1309">Salon-JAGUAL </button>
+			<button class="btn btn-info urlBtn" data-url="1310">Salon-GUINA </button>
+			<button class="btn btn-info urlBtn" data-url="1311">Salon-CALANDAYMA </button>
+			<button class="btn btn-info urlBtn" data-url="1312">Salon-NIEVES </button>
+			<button class="btn btn-info urlBtn" data-url="1313">Salon-MESITAS </button>
+			<button class="btn btn-info urlBtn" data-url="1320">Salon-SAN-VICENTE </button>
+			<button class="btn btn-info urlBtn" data-url="2258">PATIO-FUENTE </button>
+		</div>
+	</div>
 	
     <!-- Tabla para mostrar los resultados -->
 	<div class="table-responsive">
@@ -192,18 +214,18 @@
 			
 		  <thead>
 			<tr>
-			  <th scope="col">#</th>
-			  <th scope="col">First</th>
-			  <th scope="col">Last</th>
-			  <th scope="col">Handle</th>
-			  <th scope="col">First</th>
-			  <th scope="col">Last</th>
-			  <th scope="col">Handle</th>
+			  <th >#</th>
+			  <th >First</th>
+			  <th >Last</th>
+			  <th >Handle</th>
+			  <th >First</th>
+			  <th >Last</th>
+			  <th >Last</th>
 			</tr>
 		  </thead>
 
 			<tbody>
-				
+
 				<!-- Aquí se agregarán las filas dinámicamente -->
 			</tbody>
 		</table>
@@ -232,7 +254,7 @@
                 const doc = parser.parseFromString(data.contents, "text/html");
 
                 // Seleccionar las filas de la tabla
-                const filas = doc.querySelectorAll("tr"); // Cambia el selector si es necesario
+                const filas = doc.querySelectorAll("table tr"); // Cambia el selector si es necesario
                 if (filas.length > 0) {
                     // Limpiar el cuerpo de la tabla y agregar las filas
                     tabla.innerHTML = ""; 
@@ -242,22 +264,27 @@
 						}
 						else{
 							const primeraFila = filas[0];
-							console.log(primeraFila.cells.length);
+							//console.log(primeraFila.cells.length);
                             tabla.innerHTML += fila.outerHTML; // Agregar fila a la tabla
 						}
                         
                     });
+					
+
+							
+						
+			
                 } else {
                     tabla.innerHTML = "<tr><td colspan='3'>No se encontró contenido en la tabla.</td></tr>";
                 }
-
-
+						
+						
             } catch (error) {
                 console.error(error);
-                tabla.innerHTML = `<tr><td colspan='3'>Error: ${error.message}</td></tr>`;
+                //tabla.innerHTML = `<tr><td colspan='3'>Error: ${error.message}</td></tr>`;
             }
-			
-        }
+	}
+      
 
 
         // Función para mostrar/ocultar una sección
@@ -288,6 +315,8 @@
             });
         });
 		
+
+
 		
     </script>
 </body>
