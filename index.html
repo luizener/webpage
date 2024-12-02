@@ -232,13 +232,14 @@
 			
 		  <thead>
 			<tr>
+			  <th >FECHA INICIO</th>
+			  <th >FECHA FIN</th>
 			  <th >DIA</th>
 			  <th >HORARIO</th>
 			  <th >CLASE-ACTIVIDAD</th>
 			  <th >GRUPO</th>
 			  <th >DOCENTE</th>
-			  <th >FECHA INICIO</th>
-			  <th >FECHA FIN</th>
+
 			</tr>
 		  </thead>
 
@@ -283,23 +284,25 @@
 						}
 						else{
 							
-							if(fila.childElementCount==6){								
+							if(fila.childElementCount==6){		
+								fila_act += '<td>'+fila.cells[4].innerText+'</td>';	
+								fila_act += '<td>'+fila.cells[5].innerText+'</td>';	
 								fila_act += '<td>'+fila.cells[0].innerText+'</td>';	
 								fila_act += '<td>'+fila.cells[1].innerText+'</td>';
 								fila_act += '<td>'+fila.cells[2].innerText+'</td>';	
 								fila_act += '<td>'+fila.cells[3].innerText+'</td>';	
 								fila_act += '<td>'+' '+'</td>';	
-								fila_act += '<td>'+fila.cells[4].innerText+'</td>';	
-								fila_act += '<td>'+fila.cells[5].innerText+'</td>';	
+
 							}
 							else{	
+								fila_act += '<td>'+fila.cells[5].innerText+'</td>';
+								fila_act += '<td>'+fila.cells[6].innerText+'</td>';
 								fila_act += ('<td>'+fila.cells[0].innerText+'</td>');	
 								fila_act += '<td>' +fila.cells[1].innerText+'</td>';
 								fila_act += '<td>'+fila.cells[2].innerText+'</td>';	
 								fila_act += '<td>'+fila.cells[3].innerText+'</td>';	
 								fila_act += '<td>'+fila.cells[4].innerText+'</td>';	
-								fila_act += '<td>'+fila.cells[5].innerText+'</td>';
-								fila_act += '<td>'+fila.cells[6].innerText+'</td>';
+
 							}
                             tabla.innerHTML += '<tr>'+fila_act+'</tr>'; // Agregar fila a la tabla
 						}
