@@ -280,7 +280,7 @@
                     filas.forEach((fila, index) => {
                         const primeraCelda = fila.cells[0];
 						var fila_act="";
-						if (primeraCelda && primeraCelda.textContent.trim().startsWith('D')) {
+						if (primeraCelda && primeraCelda.textContent.trim().startsWith('D') || fila.cells[1].innerHTML.trim() === "") {
 						}
 						else{
 							
