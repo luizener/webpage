@@ -25,11 +25,6 @@
 <body>
 
 
-<script type="text/javascript">
-
-</script>
-
-
 
     <h1><center>HORARIO ESPACIOS U ROSARIO</center></h1>
 
@@ -49,9 +44,9 @@
     <button type="button" class="btn btn-success" onclick="mostrarSeccion(9)">CASUR PISO 6</button>
     <button type="button" class="btn btn-success" onclick="mostrarSeccion(10)">PEDRO FERMIN</button>
     <button type="button" class="btn btn-success" onclick="mostrarSeccion(11)">CASA ROSARISTA</button>
-<button type="button" class="btn btn-success" onclick="mostrarSeccion(12)">NOVA GSB</button>
+	<button type="button" class="btn btn-success" onclick="mostrarSeccion(12)">NOVA GSB</button>
  </div>  
-    <!-- Puedes agregar más botones según sea necesario -->
+
 
     <!-- Sección 1: Botones 1-10 -->
     <div class="seccion" id="seccion1">
@@ -312,14 +307,7 @@
                     tabla.innerHTML = "<tr><td colspan='3'>No se encontró contenido en la tabla.</td></tr>";
                 }
 				
-					const tablaResultados = $('#tablaResultados');
-					if ($.fn.DataTable.isDataTable(tablaResultados)) {
-						// Destruir instancia previa si existe
-						tablaResultados.DataTable().destroy();
-						console.log('murio');
-					}
-					// Crear nueva instancia
-					tablaResultados.DataTable();
+
 						
             } catch (error) {
                 console.error(error);
